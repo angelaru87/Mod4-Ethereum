@@ -64,3 +64,10 @@ document.getElementById('GetPrice').addEventListener('click', async function() {
             console.error('Error executing Get Price', error);
         });
 });
+
+document.getElementById('GetPriceButton').addEventListener('click', async function() {
+    // Ejemplo de lógica para obtener los precios de Token A y Token B
+    // Reemplazar estas funciones con las que corresponda para obtener los datos reales
+    const tokenAPrice = await getTokenPrice('TokenA');
+    const tokenBPrice = await getTokenPrice('TokenB');
+    
