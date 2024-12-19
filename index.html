@@ -12,9 +12,9 @@
         <h2>Boss Your Life</h2>
     </header>
     <main>
-        <section>
+    <section>
             
-            <div class="container">
+        <div class="container">
                 <div class="column">
                     <div class="button-group">
                         <h3>Swap Tokens</h3>
@@ -25,48 +25,54 @@
                             <option value="TokenA">Token A</option>
                             <option value="TokenB">Token B</option>
                         </select>
-                                                </select>
-                        
-                        <!-- Botón de Acción SWAP -->
+                                               
                         <button id="SwapButton"><img src="buttons/exchangeAtoB.png" alt="Icono 1"><strong>Confirm Swap</strong></button>
                     </div>
                 </div>
-                <div class="column central-column">
-                    <div class="button-group">
+            <div class="column central-column">
+                <div class="button-group">
                         <h3>Liquidity On</h3>
                         <h4>Token A</h4>
                         <input type="text" id="tokenAOn" name="tokenAOn" placeholder="Enter Token A Amount">
                         <h4>Token B</h4>
                         <input type="text" id="tokenBOn" name="tokenBOn" placeholder="Enter Token B Amount">
                         <button id="LiquidityOnButton"><img src="buttons/liquid.png" alt="Icono 1"> Add Liquidity</button>
-                    </div>
                 </div>
-                <div class="column">
-                    <div class="button-group">
+            </div>
+                
+            <div class="column">
+                <div class="button-group">
                         <h3>Liquidity Off</h3>
                         <h4>Token A</h4>
                         <input type="text" id="tokenAOff" name="tokenAOff" placeholder="Enter Token A Amount">
                         <h4>Token B</h4>
                         <input type="text" id="tokenBOff" name="tokenBOff" placeholder="Enter Token B Amount">
                         <button id="LiquidityOffButton"><img src="buttons/blood.png" alt="Icono 2"> Retire Liquidity </button>
-                    </div>
                 </div>
-                <div class="column">
-                    <div class="button-group">
+            </div>
+                
+            <div class="column">
+                <div class="button-group">
                         <h3>Prices</h3>
                         <h4>Token A Price</h4> 
                         <input type="text" id="tokenAPrice" name="tokenAPrice" placeholder="Token A Price" readonly> 
                         <h4>Token B Price</h4> 
                         <input type="text" id="tokenBPrice" name="tokenBPrice" placeholder="Token B Price" readonly>
                          <button id="GetPriceButton"><img src="buttons/price.png" alt="Icono 5"> Get Price</button>
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+    </section>
+
     </main>
+
     <footer>
         <p>&copy; 2024 Penacino Exchange. All Rights Reserved.</p>
     </footer>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
