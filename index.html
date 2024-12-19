@@ -1,69 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorldWide Penacino Exchange</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>WorldWide Penacino Exchange</h1>
         <h2>Boss Your Life</h2>
     </header>
     <main>
-    <section>
-            
-        <div class="container">
+        <section>
+            <!-- Wallet Connect -->
+            <div class="container">
+                <div class="button-group">
+                    <button id="btn-connect">Wallet connect</button>
+                    <div id="wallet-info" class="text-center text-gray-400 mb-8 hidden"></div>
+                    <p>Estate: <span id="status-text">Conect</span></p>
+                    <p>Address: <span id="wallet-address">-</span></p>
+                    <p>Balance ETH: <span id="eth-balance">-</span></p>
+                    <p>Gas: <span id="gas-amount">-</span></p>
+                    <p>Red: <span id="network-name">-</span></p>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="container">
+
                 <div class="column">
                     <div class="button-group">
                         <h3>Swap Tokens</h3>
-                        <h4>Amount</h4>
-                        <input type="text" id="amount" name="amount" placeholder="Enter Amount">
-                        <h4>Token Id</h4>
-                        <select id="tokenFrom" name="tokenFrom">
-                            <option value="TokenA">Token A</option>
-                            <option value="TokenB">Token B</option>
-                        </select>
-                                               
-                        <button id="SwapButton"><img src="buttons/exchangeAtoB.png" alt="Icono 1"><strong>Confirm Swap</strong></button>
+                        <div class="mb-4">
+                            <label for="tokenToSwap">Select Token to change:</label>
+                            <select id="tokenToSwap">
+                                <option value="tokenA">Token A</option>
+                                <option value="tokenB">Token B</option>
+                            </select>
+                        </div>
+                        <label for="swapAmount" class="block text-sm mb-1">Amount:</label>
+                        <input type="number" id="swapAmount">
+                        <button id="btn-swap"><img src="buttons/exchangeAtoB.png" alt="Icono 1"><strong>Confirm
+                                Swap</strong></button>
+
                     </div>
                 </div>
-            <div class="column central-column">
-                <div class="button-group">
-                        <h3>Liquidity On</h3>
+
+                <div class="column">
+                    <div class="button-group">
+                        <!-- Add Liquidity -->
+                        <h3>Add Liquidity </h3>
+                        <label for="addLiquidityTokenA" class="block text-sm mb-1">Amount Token A:</label>
+                        <input type="number" id="addLiquidityTokenA">
+                        <label for="addLiquidityTokenB" class="block text-sm mb-1">Amount Token B:</label>
+                        <input type="number" id="addLiquidityTokenB">
+                        <button id="btn-addLiquidity"><img src="buttons/liquid.png" alt="Icono 1"> Add
+                            Liquidity</button>
+
+
+
+                        <!-- <h3>Add Liquidity </h3>
                         <h4>Token A</h4>
                         <input type="text" id="tokenAOn" name="tokenAOn" placeholder="Enter Token A Amount">
                         <h4>Token B</h4>
-                        <input type="text" id="tokenBOn" name="tokenBOn" placeholder="Enter Token B Amount">
-                        <button id="LiquidityOnButton"><img src="buttons/liquid.png" alt="Icono 1"> Add Liquidity</button>
-                </div>
-            </div>
-                
-            <div class="column">
-                <div class="button-group">
-                        <h3>Liquidity Off</h3>
-                        <h4>Token A</h4>
-                        <input type="text" id="tokenAOff" name="tokenAOff" placeholder="Enter Token A Amount">
-                        <h4>Token B</h4>
-                        <input type="text" id="tokenBOff" name="tokenBOff" placeholder="Enter Token B Amount">
-                        <button id="LiquidityOffButton"><img src="buttons/blood.png" alt="Icono 2"> Retire Liquidity </button>
-                </div>
-            </div>
-                
-            <div class="column">
-                <div class="button-group">
-                        <h3>Prices</h3>
-                        <h4>Token A Price</h4> 
-                        <input type="text" id="tokenAPrice" name="tokenAPrice" placeholder="Token A Price" readonly> 
-                        <h4>Token B Price</h4> 
-                        <input type="text" id="tokenBPrice" name="tokenBPrice" placeholder="Token B Price" readonly>
-                         <button id="GetPriceButton"><img src="buttons/price.png" alt="Icono 5"> Get Price</button>
-                </div>
-            </div>
-        </div>
+                        <input type="text" id="tokenBOn" name="tokenBOn" placeholder="Enter Token B Amount"> -->
 
-    </section>
+                    </div>
+                </div>
+
+                <!-- Remove Liquidity -->
+                <div class="column">
+                    <div class="button-group">
+                        <h3>Remove Liquidity</h2>
+                            <label for="removeLiquidityTokenA" class="block text-sm mb-1">Amount Token A:</label>
+                            <input type="number" id="removeLiquidityTokenA">
+                            <label for="removeLiquidityTokenB" class="block text-sm mb-1">Amount Token B:</label>
+                            <input type="number" id="removeLiquidityTokenB">
+                            <button id="btn-removeLiquidity"><img src="buttons/blood.png" alt="Icono 2"> Remove
+                                Liquidity </button>
+                    </div>
+                </div>
+
+                <!-- Get Token Price -->
+                <div class="column">
+                    <div class="button-group">
+                        <h3>Price Tokens</h3>
+                        <label for="tokenPrice">Choose Token:</label>
+                        <select id="tokenPrice">
+                            <option value="tokenA">Token A</option>
+                            <option value="tokenB">Token B</option>
+                        </select>
+                        <button id="btn-getPrice"><img src="buttons/price.png" alt="Icono 5"> Get Price</button>
+                        <p id="priceResult">Price: <span>-</span></p>
+
+                    </div>
+                </div>
+
+        </section>
 
     </main>
 
@@ -71,7 +109,8 @@
         <p>&copy; 2024 Penacino Exchange. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="scripts.js"></script>
 
 </body>
 
